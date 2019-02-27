@@ -2,6 +2,7 @@ package com.zhaowh.dialog;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,7 +14,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnAlertDialog;
+    private Button btnAlertDialog, btn1;
     private AlertDialog.Builder alert;
     private AlertDialog.Builder backAlert;
 
@@ -23,6 +24,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         btnAlertDialog = (Button) findViewById(R.id.btn_alert_dialog);
         btnAlertDialog.setOnClickListener(this);
+        btn1 = (Button) findViewById(R.id.btn1);
+        btn1.setOnClickListener(this);
+
         initAlterDialog();
     }
 
@@ -63,6 +67,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.btn_alert_dialog:
                 alert.show();
+                break;
+            case R.id.btn1:
+                Intent intent = new Intent(this, Secondctivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;

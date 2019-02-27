@@ -5,14 +5,16 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/btn_alert_dialog"
+        android:id="@+id/btn_color"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="显示AlterDialog"/>
+        android:text="改变文字颜色"/>
 
-    <Button
-        android:id="@+id/btn1"
+    <TextView
+        android:id="@+id/tv_color"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="AlertDialog的内容显示为列表"/>
+        android:layout_height="match_parent"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:text="高大威猛"/>
 </LinearLayout>
