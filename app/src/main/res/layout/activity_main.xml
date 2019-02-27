@@ -15,4 +15,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="AlertDialog的内容显示为列表"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AlertDialog的内容显示为列表（并带有图标的）"/>
 </LinearLayout>

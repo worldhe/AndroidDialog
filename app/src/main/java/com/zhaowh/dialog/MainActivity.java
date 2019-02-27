@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnAlertDialog, btn1;
+    private Button btnAlertDialog, btn1, btn2;
     private AlertDialog.Builder alert;
     private AlertDialog.Builder backAlert;
 
@@ -25,7 +25,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnAlertDialog = (Button) findViewById(R.id.btn_alert_dialog);
         btnAlertDialog.setOnClickListener(this);
         btn1 = (Button) findViewById(R.id.btn1);
+        btn2 = (Button) findViewById(R.id.btn2);
         btn1.setOnClickListener(this);
+        btn2.setOnClickListener(this);
 
         initAlterDialog();
     }
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 allToast("CANCEL");
             }
         });
+        alert.setCancelable(false);
         alert.create();
 
         /***************************/
@@ -64,17 +67,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        Intent intent = null;
         switch (v.getId()){
             case R.id.btn_alert_dialog:
                 alert.show();
-                break;
+                return;
             case R.id.btn1:
-                Intent intent = new Intent(this, Secondctivity.class);
+                //AlertDialog的内容为列表的界面
+                intent = new Intent(this, Secondctivity.class);
                 startActivity(intent);
+                break;
+            case R.id.btn2:
+                //AlertDialog的内容为列表的界面（带图标）
+                intent = new Intent(this, ThridActivity.class);
                 break;
             default:
                 break;
         }
+        startActivity(intent);
     }
 
     private void allToast(String content){

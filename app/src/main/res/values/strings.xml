@@ -6,4 +6,15 @@
         <item>绿</item>
         <item>蓝</item>
     </string-array>
+
+    <string-array name="text_set_name">
+        <item>WIFI设置</item>
+        <item>蓝牙设置</item>
+        <item>日期和时间设置</item>
+    </string-array>
+    <string-array name="text_set_icon">
+        <item>apple_pic</item>
+        <item>banana_pic</item>
+        <item>cherry_pic</item>
+    </string-array>
 </resources>
