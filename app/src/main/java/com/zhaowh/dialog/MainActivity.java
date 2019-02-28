@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnAlertDialog, btn1, btn2;
+    private Button btnAlertDialog, btn1, btn2, btn3;
     private AlertDialog.Builder alert;
     private AlertDialog.Builder backAlert;
 
@@ -26,8 +26,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnAlertDialog.setOnClickListener(this);
         btn1 = (Button) findViewById(R.id.btn1);
         btn2 = (Button) findViewById(R.id.btn2);
+        btn3 = (Button) findViewById(R.id.btn3);
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
+        btn3.setOnClickListener(this);
 
         initAlterDialog();
     }
@@ -80,6 +82,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn2:
                 //AlertDialog的内容为列表的界面（带图标）
                 intent = new Intent(this, ThridActivity.class);
+                break;
+            case R.id.btn3:
+                intent = new Intent(this, FourActivity.class);
                 break;
             default:
                 break;
